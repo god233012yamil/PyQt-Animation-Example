@@ -25,33 +25,7 @@ zero velocity (ease in) or decelerate to zero velocity (ease out). Ease in and e
 in the same easing curve.
 
 When using a QPropertyAnimation, the associated easing curve will be used to control the progress of the 
-interpolation between startValue and endValue:
+interpolation between startValue and endValue.
 
 # Code to create the animation to hide the buttons.
-for button in list_of_buttons:
-      animation = QPropertyAnimation(button, b"geometry")
-      animation.setDuration(BUTTON_ANIMATION_DURATION_IN_MS)
-      animation.setStartValue(QRect(button.x(),
-                                    button.y(),
-                                    button.width(),
-                                    button.height()))
-      animation.setEndValue(QRect(button.x(),
-                                  button.y() + 150,
-                                  button.width(),
-                                  button.height()))
-      animation.setEasingCurve(QEasingCurve.InOutBack)  
-      
-# Code to create the animation to show the buttons.
-for button in list_of_buttons:
-      animation = QPropertyAnimation(button, b"geometry")
-      animation.setDuration(BUTTON_ANIMATION_DURATION_IN_MS)
-      animation.setStartValue(QRect(button.x(),
-                                    button.y() + 150,
-                                    button.width(),
-                                    button.height()))
-      animation.setEndValue(QRect(button.x(),
-                                  button.y(),
-                                  button.width(),
-                                  button.height()))
-      animation.setEasingCurve(QEasingCurve.InOutBack)     
-      
+![image](https://user-images.githubusercontent.com/5813359/160732708-003bdbd8-a0aa-4dc8-84da-ce05dbc87a4b.png)
