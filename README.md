@@ -27,10 +27,31 @@ in the same easing curve.
 When using a QPropertyAnimation, the associated easing curve will be used to control the progress of the 
 interpolation between startValue and endValue:
 
-      QPropertyAnimation animation;
-      animation.setStartValue(0);
-      animation.setEndValue(1000);
-      animation.setDuration(1000);
-      animation.setEasingCurve(QEasingCurve::InOutQuad);
+# Code to create the animation to hide the buttons.
+for button in list_of_buttons:
+      animation = QPropertyAnimation(button, b"geometry")
+      animation.setDuration(BUTTON_ANIMATION_DURATION_IN_MS)
+      animation.setStartValue(QRect(button.x(),
+                                    button.y(),
+                                    button.width(),
+                                    button.height()))
+      animation.setEndValue(QRect(button.x(),
+                                  button.y() + 150,
+                                  button.width(),
+                                  button.height()))
+      animation.setEasingCurve(QEasingCurve.InOutBack)  
       
+# Code to create the animation to show the buttons.
+for button in list_of_buttons:
+      animation = QPropertyAnimation(button, b"geometry")
+      animation.setDuration(BUTTON_ANIMATION_DURATION_IN_MS)
+      animation.setStartValue(QRect(button.x(),
+                                    button.y() + 150,
+                                    button.width(),
+                                    button.height()))
+      animation.setEndValue(QRect(button.x(),
+                                  button.y(),
+                                  button.width(),
+                                  button.height()))
+      animation.setEasingCurve(QEasingCurve.InOutBack)     
       
