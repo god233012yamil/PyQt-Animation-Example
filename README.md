@@ -29,3 +29,7 @@ interpolation between startValue and endValue.
 
 # Code to create the animation to hide the buttons.
 ![image](https://user-images.githubusercontent.com/5813359/160732708-003bdbd8-a0aa-4dc8-84da-ce05dbc87a4b.png)
+
+# Code to create the animation to show the buttons when they are hidden.
+![image](https://user-images.githubusercontent.com/5813359/160732895-630e6604-70b2-4309-8ea7-68738ffd95fa.png)
+
